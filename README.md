@@ -19,3 +19,5 @@ Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalad
    cd prueba_tecnica
    
    npm run build
+
+   npm run start
