@@ -16,4 +16,5 @@ Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalad
    ```bash
    git clone (https://github.com/Jnajera0430/prueba_tecnica)https://github.com/Jnajera0430/prueba_tecnica
 
+```bash
 cd prueba_tecnica
