@@ -14,7 +14,7 @@ Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalad
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone (https://github.com/Jnajera0430/prueba_tecnica)https://github.com/Jnajera0430/prueba_tecnica
+   git clone (https://github.com/Jnajera0430/prueba_tecnica.git)
 
    cd prueba_tecnica
    
