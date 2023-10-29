@@ -18,5 +18,4 @@ Antes de comenzar con la instalación, asegúrate de tener lo siguiente instalad
 
    ```bash
    cd prueba_tecnica
-   ```bash
    npm run build
