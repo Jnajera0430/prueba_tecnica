@@ -5,9 +5,11 @@ import { GetAllUsersUseCase } from "../../../src/domain/interfaces/useCases/user
 import userRouter from "../../../src/presentation/routers/user-router";
 import server from "../../../src/server";
 import { UpdateUserUseCase } from "../../../src/domain/interfaces/useCases/user/update-user.interface";
+import { PageOptionsDto } from "../../../src/domain/dto/page/pageOptions.dto";
+import { PaginationDto } from "../../../src/domain/dto/page/pagination.dto";
 
 class MockGetAllUsersUseCase implements GetAllUsersUseCase {
-    execute(): Promise<User[]> {
+    execute(pageOptionsDto?: PageOptionsDto): Promise<PaginationDto<User>> {
         throw new Error("Method not implemented.");
     }
 }
@@ -50,7 +52,16 @@ describe("user router", () => {
                 email: "peresjuan@test.com",
                 status: StatusEnum.ACT
             }]
-            jest.spyOn(mockGetAllUsersUseCase, "execute").mockImplementation(() => Promise.resolve(ExpectData));
+            jest.spyOn(mockGetAllUsersUseCase, "execute").mockImplementation(() => Promise.resolve({
+                data: ExpectData, meta: {
+                    hasNextPage: false,
+                    hasPreviousPage: false,
+                    itemCount: 1,
+                    page: 1,
+                    pageCount: 1,
+                    take: 10
+                }
+            }));
             const response = await request(server).get("/user");
             expect(response.status).toBe(200);
             expect(mockGetAllUsersUseCase.execute).toBeCalledTimes(1);

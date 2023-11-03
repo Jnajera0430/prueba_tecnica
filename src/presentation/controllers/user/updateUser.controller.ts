@@ -16,7 +16,7 @@ export const patchUpdateUser = async (req: Request, res: Response, updateUserUse
                     constraints: error.constraints,
                 })),
             });
-        }
+        }   
         await updateUserUseCase.execute(req.body);
         res.statusCode = 200;
         res.json({

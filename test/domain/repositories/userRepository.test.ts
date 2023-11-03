@@ -1,4 +1,7 @@
+import { FindInterface } from "../../../src/data/interfaces/dataSource/database-wrapper";
 import { UserDataSource } from "../../../src/data/interfaces/dataSource/user-data-source";
+import { PageOptionsDto } from "../../../src/domain/dto/page/pageOptions.dto";
+import { PaginationDto } from "../../../src/domain/dto/page/pagination.dto";
 import { StatusEnum, User } from "../../../src/domain/entities/user";
 import { UserRepository } from "../../../src/domain/interfaces/repositories/user-repository.interface";
 import { UserRepositoryImpl } from "../../../src/domain/repositories/userRepository";
@@ -8,7 +11,7 @@ class MockUserDataSource implements UserDataSource {
         throw new Error("Method not implemented.");
     }
 
-    getAll(): Promise<User[]> {
+    getAll(pageOptionsDto?: PageOptionsDto): Promise<FindInterface>{
         throw new Error("Method not implemented.");
     }
     update(user: User): Promise<boolean> {
@@ -37,9 +40,27 @@ describe("User repository", () => {
                 email: "peresjuan@test.com",
                 status: StatusEnum.ACT
             }];
-            jest.spyOn(mockUserDataSource, "getAll").mockImplementation(() => Promise.resolve(ExpectData));
+            jest.spyOn(mockUserDataSource, "getAll").mockImplementation(() => Promise.resolve({
+                rows: ExpectData, pageMeta: {
+                    hasNextPage: false,
+                    hasPreviousPage: false,
+                    itemCount: 1,
+                    page: 1,
+                    pageCount: 1,
+                    take: 10
+                }
+            }));
             const result = await userRepository.getUsers();
-            expect(result).toBe(ExpectData);
+            expect(result).toEqual({
+                data: [expect.objectContaining(ExpectData[0])], meta: {
+                    hasNextPage: false,
+                    hasPreviousPage: false,
+                    itemCount: 1,
+                    page: 1,
+                    pageCount: 1,
+                    take: 10
+                }
+            });
         });
     })
 
@@ -61,7 +82,7 @@ describe("User repository", () => {
     })
 
     describe("updateUser", () => {
-        test('should returns true', async () => { 
+        test('should returns true', async () => {
             const data = {
                 id: 1,
                 nombres: "Juan Andres",

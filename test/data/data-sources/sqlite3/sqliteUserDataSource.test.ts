@@ -1,6 +1,7 @@
 import { SqliteUserDataSource } from "../../../../src/data/dataSources/sqlite3/sqliteUserDataSource";
 import { DatabaseWrapper } from "../../../../src/data/interfaces/dataSource/database-wrapper"
 import { StatusEnum } from "../../../../src/domain/entities/user";
+import { OrderPage } from "../../../../src/domain/enum/page/orderPage.enum";
 
 describe("Sqlite dataSource", () => {
     let mockDatabase: DatabaseWrapper;
@@ -18,26 +19,28 @@ describe("Sqlite dataSource", () => {
 
     test("get All", async () => {
         const ds = new SqliteUserDataSource(mockDatabase);
-        jest.spyOn(mockDatabase, "find").mockImplementation(() => Promise.resolve([{
-            id: 1,
-            nombres: "Juan Andres",
-            apellidos: "Peres torres",
-            edad: 23,
-            telefono: 314856588,
-            email: "peresjuan@test.com",
-            status: StatusEnum.ACT
-        }]))
-        const result = await ds.getAll();
-        expect(mockDatabase.find).toHaveBeenCalledWith({});
-        expect(result).toStrictEqual([{
-            id: 1,
-            nombres: "Juan Andres",
-            apellidos: "Peres torres",
-            edad: 23,
-            telefono: 314856588,
-            email: "peresjuan@test.com",
-            status: StatusEnum.ACT
-        }])
+        jest.spyOn(mockDatabase, "find").mockImplementation(async (query) => {
+            expect(query).toEqual({ order: OrderPage.ASC, page: 1, take: 10 });
+            return Promise.resolve({
+                rows: [{
+                    id: 1,
+                    nombres: "Juan Andres",
+                    apellidos: "Peres torres",
+                    edad: 23,
+                    telefono: 314856588,
+                    email: "peresjuan@test.com",
+                    status: StatusEnum.ACT
+                }],
+                pageMeta: {
+                    hasNextPage: false,
+                    hasPreviousPage: false,
+                    itemCount: 1,
+                    page: 1,
+                    pageCount: 1,
+                    take: 10
+                }
+            });
+        })
     })
 
     test("create", async () => {

@@ -1,3 +1,5 @@
+import { PageOptionsDto } from "../../../../src/domain/dto/page/pageOptions.dto";
+import { PaginationDto } from "../../../../src/domain/dto/page/pagination.dto";
 import { StatusEnum, User } from "../../../../src/domain/entities/user";
 import { UserRepository } from "../../../../src/domain/interfaces/repositories/user-repository.interface";
 import { GetAllUsers } from "../../../../src/domain/useCases/user/getAllUser";
@@ -7,7 +9,7 @@ describe('Get all users use case', () => {
         createUser(user: User): Promise<boolean> {
             throw new Error("Method not implemented.")
         }
-        getUsers(): Promise<User[]> {
+        getUsers(pageOptionsDto?: PageOptionsDto): Promise<PaginationDto<User>> {
             throw new Error("Method not implemented.")
         }
         updateUser(user: User): Promise<boolean> {
@@ -31,9 +33,27 @@ describe('Get all users use case', () => {
             email: "peresjuan@test.com",
             status: StatusEnum.ACT
         }];
-        jest.spyOn(mockUserRepository, "getUsers").mockImplementation(() => Promise.resolve(ExpectData));
+        jest.spyOn(mockUserRepository, "getUsers").mockImplementation(() => Promise.resolve({
+            data: ExpectData, meta: {
+                hasNextPage: false,
+                hasPreviousPage: false,
+                itemCount: 1,
+                page: 1,
+                pageCount: 1,
+                take: 10
+            }
+        }));
         const getAllUsersUse = new GetAllUsers(mockUserRepository);
         const result = await getAllUsersUse.execute();
-        expect(result).toStrictEqual(ExpectData);
+        expect(result).toStrictEqual({
+            data: ExpectData, meta: {
+                hasNextPage: false,
+                hasPreviousPage: false,
+                itemCount: 1,
+                page: 1,
+                pageCount: 1,
+                take: 10
+            }
+        });
     })
 })

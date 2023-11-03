@@ -1,3 +1,5 @@
+import { PageOptionsDto } from "../../../../src/domain/dto/page/pageOptions.dto";
+import { PaginationDto } from "../../../../src/domain/dto/page/pagination.dto";
 import { StatusEnum, User } from "../../../../src/domain/entities/user";
 import { UserRepository } from "../../../../src/domain/interfaces/repositories/user-repository.interface";
 import { CreateUser } from "../../../../src/domain/useCases/user/createUser";
@@ -7,7 +9,7 @@ describe('Create user Use case',()=>{
         createUser(user: User): Promise<boolean> {
             throw new Error("Method not implemented.")
         }
-        getUsers(): Promise<User[]> {
+        getUsers(pageOptionsDto?: PageOptionsDto): Promise<PaginationDto<User>> {
             throw new Error("Method not implemented.")
         }
         updateUser(user: User): Promise<boolean> {

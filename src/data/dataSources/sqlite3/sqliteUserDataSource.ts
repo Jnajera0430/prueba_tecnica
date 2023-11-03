@@ -1,5 +1,7 @@
+import { PageOptionsDto } from "../../../domain/dto/page/pageOptions.dto";
+import { PaginationDto } from "../../../domain/dto/page/pagination.dto";
 import { User } from "../../../domain/entities/user";
-import { DatabaseWrapper } from "../../interfaces/dataSource/database-wrapper";
+import { DatabaseWrapper, FindInterface } from "../../interfaces/dataSource/database-wrapper";
 import { UserDataSource } from "../../interfaces/dataSource/user-data-source";
 
 export class SqliteUserDataSource implements UserDataSource {
@@ -11,15 +13,14 @@ export class SqliteUserDataSource implements UserDataSource {
         const result = await this.database.insertOne(user);
         return result !== null;
     }
-    async getAll(): Promise<User[]> {
-        const result = await this.database.find({});
-        return result.map((item:User)=>({
-            ...item
-        }));
+    async getAll(pageOptionsDto?: PageOptionsDto): Promise<FindInterface> {
+        return await this.database.find(pageOptionsDto);
     }
 
     async update(user: User): Promise<boolean> {
         const result = await this.database.update(user);
+        console.log(result);
+        
         return result !== null    
     }
 }
