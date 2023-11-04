@@ -5,7 +5,7 @@ export interface FindInterface {
     pageMeta: PageMetaDto
 }
 export interface DatabaseWrapper {
-    find(query?: object | PageOptionsDto): Promise<FindInterface>;
+    find(query?: object | PageOptionsDto,search?:any): Promise<FindInterface>;
     insertOne(doc: any): Promise<any>;
     update(doc: any): Promise<any>;
 }

@@ -1,5 +1,6 @@
 import { PageOptionsDto } from "../../../domain/dto/page/pageOptions.dto";
 import { PaginationDto } from "../../../domain/dto/page/pagination.dto";
+import { SearchUserDto } from "../../../domain/dto/search/searchUser.dto";
 import { User } from "../../../domain/entities/user";
 import { DatabaseWrapper, FindInterface } from "../../interfaces/dataSource/database-wrapper";
 import { UserDataSource } from "../../interfaces/dataSource/user-data-source";
@@ -13,8 +14,8 @@ export class SqliteUserDataSource implements UserDataSource {
         const result = await this.database.insertOne(user);
         return result !== null;
     }
-    async getAll(pageOptionsDto?: PageOptionsDto): Promise<FindInterface> {
-        return await this.database.find(pageOptionsDto);
+    async getAll(pageOptionsDto?: PageOptionsDto,searchOptions?: SearchUserDto): Promise<FindInterface> {
+        return await this.database.find(pageOptionsDto,searchOptions);
     }
 
     async update(user: User): Promise<boolean> {
