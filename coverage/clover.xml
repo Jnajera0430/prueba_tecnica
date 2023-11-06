@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698814095879" clover="3.2.0">
-  <project timestamp="1698814095879" name="All files">
-    <metrics statements="381" coveredstatements="352" conditionals="186" coveredconditionals="145" methods="142" coveredmethods="120" elements="709" coveredelements="617" complexity="0" loc="381" ncloc="381" packages="23" files="33" classes="33"/>
+<coverage generated="1699284294401" clover="3.2.0">
+  <project timestamp="1699284294401" name="All files">
+    <metrics statements="388" coveredstatements="331" conditionals="183" coveredconditionals="139" methods="146" coveredmethods="116" elements="717" coveredelements="586" complexity="0" loc="388" ncloc="388" packages="24" files="34" classes="34"/>
     <package name="dist.src">
       <metrics statements="11" coveredstatements="11" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
       <file name="server.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\server.js">
@@ -44,28 +44,29 @@
       </file>
     </package>
     <package name="dist.src.data.dataSources.sqlite3">
-      <metrics statements="19" coveredstatements="18" conditionals="11" coveredconditionals="10" methods="14" coveredmethods="12"/>
+      <metrics statements="20" coveredstatements="17" conditionals="11" coveredconditionals="10" methods="14" coveredmethods="10"/>
       <file name="sqliteUserDataSource.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\data\dataSources\sqlite3\sqliteUserDataSource.js">
-        <metrics statements="19" coveredstatements="18" conditionals="11" coveredconditionals="10" methods="14" coveredmethods="12"/>
-        <line num="2" count="2" type="cond" truecount="3" falsecount="0"/>
-        <line num="3" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="4" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="4" type="stmt"/>
+        <metrics statements="20" coveredstatements="17" conditionals="11" coveredconditionals="10" methods="14" coveredmethods="10"/>
+        <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="7" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
     </package>
     <package name="dist.src.domain.dto">
@@ -86,29 +87,29 @@
         <line num="19" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
       </file>
     </package>
     <package name="dist.src.domain.dto.page">
-      <metrics statements="13" coveredstatements="12" conditionals="5" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <metrics statements="13" coveredstatements="9" conditionals="5" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="pageOptions.dto.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\domain\dto\page\pageOptions.dto.js">
-        <metrics statements="8" coveredstatements="7" conditionals="5" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="4" conditionals="5" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
@@ -125,11 +126,11 @@
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="user.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\domain\entities\user.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="7" count="7" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
       </file>
     </package>
     <package name="dist.src.domain.enum.page">
@@ -221,7 +222,7 @@
       </file>
     </package>
     <package name="dist.src.presentation.controllers.user">
-      <metrics statements="82" coveredstatements="71" conditionals="56" coveredconditionals="44" methods="30" coveredmethods="24"/>
+      <metrics statements="81" coveredstatements="59" conditionals="54" coveredconditionals="40" methods="30" coveredmethods="21"/>
       <file name="createUser.controller.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\presentation\controllers\user\createUser.controller.js">
         <metrics statements="30" coveredstatements="23" conditionals="22" coveredconditionals="18" methods="11" coveredmethods="8"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
@@ -256,13 +257,13 @@
         <line num="57" count="1" type="stmt"/>
       </file>
       <file name="getUsers.controller.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\presentation\controllers\user\getUsers.controller.js">
-        <metrics statements="28" coveredstatements="26" conditionals="21" coveredconditionals="15" methods="9" coveredmethods="8"/>
+        <metrics statements="27" coveredstatements="14" conditionals="19" coveredconditionals="11" methods="9" coveredmethods="5"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
-        <line num="3" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -270,21 +271,20 @@
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="3" falsecount="1"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="23" count="2" type="cond" truecount="2" falsecount="2"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="2" type="cond" truecount="2" falsecount="2"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
       <file name="updateUser.controller.js" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\dist\src\presentation\controllers\user\updateUser.controller.js">
         <metrics statements="24" coveredstatements="22" conditionals="13" coveredconditionals="11" methods="10" coveredmethods="8"/>
@@ -375,6 +375,20 @@
         <line num="57" count="2" type="stmt"/>
       </file>
     </package>
+    <package name="src.data.dataSources.sqlite3">
+      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <file name="sqliteUserDataSource.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\data\dataSources\sqlite3\sqliteUserDataSource.ts">
+        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="src.domain.dto">
       <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="user.dto.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\dto\user.dto.ts">
@@ -400,14 +414,14 @@
       </file>
     </package>
     <package name="src.domain.dto.page">
-      <metrics statements="9" coveredstatements="8" conditionals="5" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="pageOptions.dto.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\dto\page\pageOptions.dto.ts">
-        <metrics statements="6" coveredstatements="5" conditionals="5" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="2" conditionals="5" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
       <file name="pagination.dto.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\dto\page\pagination.dto.ts">
@@ -421,18 +435,18 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="user.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\entities\user.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
+        <line num="1" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src.domain.enum.page">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="orderPage.enum.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\enum\page\orderPage.enum.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.domain.repositories">
@@ -440,13 +454,13 @@
       <file name="userRepository.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\repositories\userRepository.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.domain.useCases.user">
@@ -459,9 +473,9 @@
       </file>
       <file name="getAllUser.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\useCases\user\getAllUser.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="updateUser.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\domain\useCases\user\updateUser.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -471,7 +485,7 @@
       </file>
     </package>
     <package name="src.presentation.controllers.user">
-      <metrics statements="50" coveredstatements="40" conditionals="10" coveredconditionals="4" methods="8" coveredmethods="6"/>
+      <metrics statements="49" coveredstatements="31" conditionals="9" coveredconditionals="4" methods="8" coveredmethods="6"/>
       <file name="createUser.controller.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\presentation\controllers\user\createUser.controller.ts">
         <metrics statements="18" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
@@ -494,25 +508,24 @@
         <line num="44" count="0" type="stmt"/>
       </file>
       <file name="getUsers.controller.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\presentation\controllers\user\getUsers.controller.ts">
-        <metrics statements="18" coveredstatements="16" conditionals="7" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="17" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="3" falsecount="1"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="14" count="2" type="cond" truecount="1" falsecount="2"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="2" type="cond" truecount="1" falsecount="2"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
       </file>
       <file name="updateUser.controller.ts" path="C:\Users\JoseNajera\Desktop\proyectos\prueba_tec\src\presentation\controllers\user\updateUser.controller.ts">
         <metrics statements="14" coveredstatements="12" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="2"/>

@@ -15,11 +15,11 @@ export class CreateUserDto implements User {
     @IsNotEmpty()
     apellidos!: string;
 
-    @IsOptional() // El campo edad es opcional
+    @IsOptional() 
     @IsInt()
     edad!: number;
 
-    @IsOptional() // El campo telefono es opcional
+    @IsOptional() 
     @IsInt()
     telefono!: number;
 

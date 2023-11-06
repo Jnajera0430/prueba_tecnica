@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">47.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/20</span>
+                <span class='fraction'>9/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">41.17% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/18</span>
+                <span class='fraction'>7/17</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -95,8 +95,7 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -105,27 +104,26 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,25 +131,24 @@
 import { GetAllUsersUseCase } from "../../../domain/interfaces/useCases/user/get-all-users.interface";
 import { PageOptionsDto } from "../../../domain/dto/page/pageOptions.dto";
 import { OrderPage } from "../../../domain/enum/page/orderPage.enum";
-&nbsp;
+import { SearchUserDto } from "../../../domain/dto/search/searchUser.dto";
 export const getUsers = async (req: Request, res: Response, getAllUserUseCase: GetAllUsersUseCase) =&gt; {
     try {
-        let { order, page, take } = req.query;
-        let pageNum: number = 1;
-        let takeNum: number = 10;
-        if (typeof order !== 'string') {
-            order = OrderPage.ASC;
+        let { order = OrderPage.ASC, page = <span class="branch-0 cbranch-no" title="branch not covered" >1,</span> take = 10, keyWords = {}} = req.query;
+        let searchOptions:SearchUserDto = JSON.parse(keyWords.toString());
+        //const searchOptions = new SearchUserDto(id,nombres,apellidos,edad,email,status);
+        let pageNum: number = <span class="cstat-no" title="statement not covered" >1;</span>
+        let takeNum: number = <span class="cstat-no" title="statement not covered" >10;</span>
+<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (page) {</span>
+<span class="cstat-no" title="statement not covered" >            pageNum = parseInt(page.toString(), 10);</span>
         }
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof page == 'string' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >page)</span> {
-<span class="cstat-no" title="statement not covered" >            pageNum = parseInt(page);</span>
+<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (take) {</span>
+<span class="cstat-no" title="statement not covered" >            takeNum = parseInt(take.toString(),10);</span>
         }
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof take == 'string' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >take)</span> {
-<span class="cstat-no" title="statement not covered" >            takeNum = parseInt(take);</span>
-        }
-        const pageOptionsDto: PageOptionsDto = new PageOptionsDto(order, pageNum, takeNum)
-        const { data, meta } = await getAllUserUseCase.execute(pageOptionsDto);
-        res.statusCode = 200;
-        return res.json({
+        const pageOptionsDto: PageOptionsDto = <span class="cstat-no" title="statement not covered" >new PageOptionsDto(order.toString(), pageNum, takeNum)</span>
+        const { data, meta } = <span class="cstat-no" title="statement not covered" >await getAllUserUseCase.execute(pageOptionsDto,searchOptions);</span>
+<span class="cstat-no" title="statement not covered" >        res.statusCode = 200;</span>
+<span class="cstat-no" title="statement not covered" >        return res.json({</span>
             status: 200,
             message: "List Users",
             data,
@@ -169,7 +166,7 @@ export const getUsers = async (req: Request, res: Response, getAllUserUseCase: G
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-11-01T04:48:15.802Z
+                at 2023-11-06T15:24:54.317Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

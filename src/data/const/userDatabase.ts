@@ -12,7 +12,6 @@ const userDatabaseWrapper = async (): Promise<DatabaseWrapper> => {
             const whereClause: any = {};
             for (const key in search) {
                 if (search[key] !== undefined) {
-                    // Agrega una condición para el campo si no es undefined
                     whereClause[key] = {
                         [Op.substring]: `${search[key]}`
                     };

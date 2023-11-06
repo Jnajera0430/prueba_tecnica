@@ -13,8 +13,8 @@ export const getUsers = async (req: Request, res: Response, getAllUserUseCase: G
         if (page) {
             pageNum = parseInt(page.toString(), 10);
         }
-        if (typeof take == 'string' && take) {
-            takeNum = parseInt(take);
+        if (take) {
+            takeNum = parseInt(take.toString(),10);
         }
         const pageOptionsDto: PageOptionsDto = new PageOptionsDto(order.toString(), pageNum, takeNum)
         const { data, meta } = await getAllUserUseCase.execute(pageOptionsDto,searchOptions);
